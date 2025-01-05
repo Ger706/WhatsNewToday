@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const NewsCard: React.FC<any> = ({ title, content, description, author, image, url }) => {
+const NewsCard: React.FC<any> = ({ title, content, description, author, image, url, publish }) => {
     const navigate = useNavigate();
     const news = {
         title,
@@ -9,7 +9,8 @@ const NewsCard: React.FC<any> = ({ title, content, description, author, image, u
         description,
         author,
         image,
-        url
+        url,
+        publish
     };
     const handleCardClick = () => {
         navigate(`/news-detail`, { state: { news } });

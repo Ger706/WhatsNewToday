@@ -56,7 +56,7 @@ const NewsDetail = () => {
                                     color: "#6c757d"
                                 }}
                             >
-                                By: {news.author || "Unknown"} &bull; {new Date().toLocaleDateString()}
+                                By: {news.author || "Unknown"} &bull; {new Date(news.publish).toISOString().split('T')[0].replace(/-/g, '/') || " "}
                             </Card.Subtitle>
                             <Card.Text style={{
                                 textAlign: "justify",

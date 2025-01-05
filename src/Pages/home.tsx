@@ -70,6 +70,7 @@ function Home() {
                                 author={article.author ? article.author : "Unknown"}
                                 image={article.urlToImage ? article.urlToImage : "https://asset.kompas.com/crops/ZoLJ3BxkeIGhkJlrFpETM9IB2oI=/0x168:5500x3834/780x390/data/photo/2022/01/11/61dd7a1b1e57e.jpg"}
                                 url={article.url}
+                                publish = {article.publishedAt}
                             />
                         </Col>
                     ))}
